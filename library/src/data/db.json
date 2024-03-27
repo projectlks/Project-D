@@ -1,0 +1,39 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "genres": [
+        "Fantasy",
+        "Young Adult",
+        "Adventure"
+      ],
+      "publication_year": 1997,
+      "description": "Harry Potter and the Sorcerer's Stone introduces readers to a young boy named Harry Potter, who learns on his eleventh birthday that he is a wizard. He is invited to attend Hogwarts School of Witchcraft and Wizardry, where he makes friends with Ron Weasley and Hermione Granger. Together, they uncover a hidden world of magic and embark on adventures. Throughout the book, Harry learns about his past, including the tragic death of his parents at the hands of the dark wizard Voldemort. As Harry navigates the challenges of his first year at Hogwarts, he discovers his own strength and bravery."
+    },
+    {
+      "id": "2",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genres": [
+        "Fiction",
+        "Classic"
+      ],
+      "publication_year": 1960,
+      "description": "To Kill a Mockingbird is a timeless classic that explores themes of racial injustice, moral growth, and empathy. Set in the fictional town of Maycomb, Alabama, during the Great Depression, the novel follows Scout Finch, a young girl growing up in the segregated South. Through her eyes, readers witness her father, Atticus Finch, defending Tom Robinson, a black man falsely accused of raping a white woman. As the trial unfolds, Scout learns about the complexities of racism and injustice, while also discovering the importance of standing up for what is right. Harper Lee's poignant storytelling and vivid characters make To Kill a Mockingbird a powerful and thought-provoking read."
+    },
+    {
+      "id": "3",
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genres": [
+        "Classic",
+        "Literary Fiction"
+      ],
+      "publication_year": 1925,
+      "description": "The Great Gatsby is a masterful exploration of the American Dream, wealth, and the Jazz Age. Set in the prosperous Long Island of 1922, the novel follows the enigmatic Jay Gatsby, who throws extravagant parties in hopes of winning back his former love, Daisy Buchanan. Through the eyes of narrator Nick Carraway, readers are immersed in a world of excess, glamour, and moral decay. F. Scott Fitzgerald's lyrical prose and vivid imagery capture the essence of the Roaring Twenties, while also examining the darker side of wealth and ambition. The Great Gatsby remains a timeless classic that continues to resonate with readers today."
+    }
+    
+  ]
+}
