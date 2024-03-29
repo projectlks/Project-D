@@ -36,5 +36,5 @@
 }
 
 .btn:active {
-    box-shadow: 2px 2px 2px #f9f9f9, -2px -2px 2px #00000050
+    box-shadow: 0px 0px 2px #f9f9f9, 0px 0px 0px #00000050
 }

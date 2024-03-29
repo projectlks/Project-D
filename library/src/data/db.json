@@ -33,7 +33,86 @@
       ],
       "publication_year": 1925,
       "description": "The Great Gatsby is a masterful exploration of the American Dream, wealth, and the Jazz Age. Set in the prosperous Long Island of 1922, the novel follows the enigmatic Jay Gatsby, who throws extravagant parties in hopes of winning back his former love, Daisy Buchanan. Through the eyes of narrator Nick Carraway, readers are immersed in a world of excess, glamour, and moral decay. F. Scott Fitzgerald's lyrical prose and vivid imagery capture the essence of the Roaring Twenties, while also examining the darker side of wealth and ambition. The Great Gatsby remains a timeless classic that continues to resonate with readers today."
+    },
+    {
+      "id": "4",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genres": [
+        "Romance",
+        "Classic",
+        "Literary Fiction"
+      ],
+      "publication_year": 1813,
+      "description": "Pride and Prejudice is a beloved classic novel that follows the spirited Elizabeth Bennet as she navigates the social norms and expectations of Regency-era England. When the wealthy and aloof Mr. Darcy arrives in the neighborhood, Elizabeth's initial prejudice against him soon turns into a complex dance of attraction and misunderstanding. As the two protagonists navigate their pride and prejudices, they must also contend with societal expectations, family dynamics, and the pursuit of happiness. Jane Austen's witty dialogue, memorable characters, and keen observations of human nature make Pride and Prejudice a timeless romance that continues to captivate readers."
+    },
+    {
+      "id": "5",
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genres": [
+        "Fantasy",
+        "Adventure"
+      ],
+      "publication_year": 1937,
+      "description": "The Hobbit, written by J.R.R. Tolkien, is a classic fantasy novel that follows the journey of Bilbo Baggins, a hobbit who is swept away from his comfortable life in the Shire to embark on an epic adventure. Accompanied by a group of dwarves and the wizard Gandalf, Bilbo travels across Middle-earth to reclaim the lost treasure of the Lonely Mountain from the fearsome dragon, Smaug. Along the way, Bilbo encounters trolls, goblins, elves, and other fantastical creatures, testing his courage and resourcefulness. The Hobbit is a tale of heroism, friendship, and self-discovery that continues to enchant readers of all ages."
+    },
+    {
+      "id": "6",
+      "title": "1984",
+      "author": "George Orwell",
+      "genres": [
+        "Dystopian",
+        "Science Fiction"
+      ],
+      "publication_year": 1949,
+      "description": "1984, written by George Orwell, is a dystopian novel set in a totalitarian society ruled by the Party and its leader, Big Brother. The story follows Winston Smith, a low-ranking member of the Party who secretly rebels against its oppressive regime. As Winston navigates a world of surveillance, propaganda, and thought control, he begins to question the truth and reality of his existence. Along the way, he falls in love with Julia, a fellow rebel, and they embark on a dangerous journey to defy the Party and seek freedom. 1984 explores themes of government surveillance, individual freedom, and the power of language, making it a chilling and thought-provoking read."
+    },
+    {
+      "id": "7",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genres": [
+        "Coming-of-age",
+        "Literary Fiction"
+      ],
+      "publication_year": 1951,
+      "description": "The Catcher in the Rye, written by J.D. Salinger, is a coming-of-age novel that follows the rebellious teenager Holden Caulfield as he navigates the complexities of adolescence and adulthood. After being expelled from his prestigious boarding school, Holden embarks on a journey through New York City, encountering various people and situations along the way. Through Holden's cynical and introspective narration, readers gain insight into his struggles with identity, belonging, and the phoniness of the adult world. The Catcher in the Rye is a timeless exploration of teenage angst and disillusionment that continues to resonate with readers."
+    },
+    {
+      "id": "8",
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "genres": [
+        "Dystopian",
+        "Science Fiction",
+        "Classic"
+      ],
+      "publication_year": 1932,
+      "description": "Brave New World, written by Aldous Huxley, is a dystopian novel set in a future world where society is engineered and controlled by the government. In this highly regimented society, citizens are divided into rigid castes and conditioned to accept their predetermined roles and values. The story follows Bernard Marx, an Alpha-Plus intellectual, and Lenina Crowne, a Beta worker, as they navigate a world of hedonism, consumerism, and technological advancement. However, when they encounter John the Savage, a man from the 'Savage Reservation,' they are forced to confront the limits of their."
+    },
+    {
+      "id": "9",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "genres": [
+        "Fantasy",
+        "Adventure"
+      ],
+      "publication_year": 1954,
+      "description": "The Lord of the Rings is a high fantasy epic written by J.R.R. Tolkien. Set in the fictional world of Middle-earth, the story follows the quest to destroy the One Ring, a powerful artifact created by the Dark Lord Sauron. Frodo Baggins, a humble hobbit, is tasked with carrying the Ring to Mount Doom, where it can be destroyed. Alongside his companions, including the wizard Gandalf, the ranger Aragorn, and the fellowship of the ring, Frodo embarks on a perilous journey across Middle-earth. Along the way, they encounter various allies and adversaries, including elves, dwarves, orcs, and the corrupted wizard Saruman. The Lord of the Rings is a timeless tale of courage, friendship, and the struggle against evil."
+    },
+    {
+      "id": "10",
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "genres": [
+        "Psychological Fiction",
+        "Philosophical Fiction"
+      ],
+      "publication_year": 1866,
+      "description": "Crime and Punishment is a psychological novel written by Fyodor Dostoevsky. Set in St. Petersburg, Russia, the story follows the impoverished ex-student Raskolnikov, who commits a brutal murder and struggles with guilt and morality. As Raskolnikov grapples with his crime and its consequences, he becomes entangled in a web of deception, paranoia, and inner turmoil. Throughout the novel, Dostoevsky explores themes of sin, redemption, and the human condition, delving into the depths of the protagonist's psyche. Crime and Punishment is a profound examination of morality and conscience that continues to captivate readers with its psychological complexity and philosophical insights."
     }
-    
-  ]
+  ],
+  "history": []
 }

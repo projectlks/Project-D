@@ -45,12 +45,18 @@ function useFetch (url, method = 'GET')  {
 
 if (method === "POST" && postData) {
   console.log(postData);
-  options = {...options,
-    header : {
-      "Content-Type": "application/json",
+  options = {
+    ...options,
+    // header : {
+    //   "Content-Type": "application/json",
+    // },
+
+    headers: {
+      
+      "Content-Type": "application/json" 
     },
-    body : JSON.stringify(postData)
-  }
+    body: JSON.stringify(postData)
+  };
 fetchData()
 }
 
