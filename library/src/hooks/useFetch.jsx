@@ -47,10 +47,7 @@ if (method === "POST" && postData) {
   console.log(postData);
   options = {
     ...options,
-    // header : {
-    //   "Content-Type": "application/json",
-    // },
-
+ 
     headers: {
       
       "Content-Type": "application/json" 

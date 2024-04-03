@@ -24,6 +24,10 @@ const router = createBrowserRouter([
         element: <Create />
       },
       {
+        path: '/edit/:id',
+        element: <Create />
+      },
+      {
         path: "/comingSoon",
         element: <ComingSoon />
       },

@@ -2,12 +2,13 @@
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+import useTheme from "../hooks/useTheme";
 
 import cover from "./cover.jpg";
 
 export default function Detial() {
   let { id } = useParams();
-
+  let { isDark } = useTheme();
 let {
   data: book,
   error,
@@ -30,6 +31,18 @@ let {
                 <span className="text text-blue-500 mx-2">{book.author}</span>{" "}
                 In {book.publication_year}
               </p>
+              <span className="flex space-x-2 flex-nowrap overflow-hidden">
+                {book.genres.map((b) => (
+                  <p
+                    className={`tag flex-nowrap truncate ${
+                      isDark ? "dark text-black" : ""
+                    }`}
+                    key={b}
+                  >
+                    {b}
+                  </p>
+                ))}
+              </span>
 
               <h1 className="text text-2xl font-bold">Description</h1>
               <p className="text text-justify">{book.description}</p>
