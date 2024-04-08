@@ -44,7 +44,6 @@ function useFetch (url, method = 'GET')  {
     };
 
 if (method === "POST" && postData) {
-  console.log(postData);
   options = {
     ...options,
  

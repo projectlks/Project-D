@@ -66,6 +66,7 @@
     position: absolute;
     width: 4px;
     top: 8px;
+    z-index: 2;
 }
 .tag.dark::before {
  background-color: rgb(7, 33, 71);

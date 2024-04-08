@@ -1,33 +1,44 @@
 import  { useEffect, useState } from 'react'
 import { MdHistory } from "react-icons/md"; // Importing Material Design History icon
-import useFetch from '../hooks/useFetch';
-// import PropTypes from "prop-types";
+import { collection, deleteDoc, doc, onSnapshot } from 'firebase/firestore';
+import { database } from '../firebase';
+import useTheme from '../hooks/useTheme';
 
-const History = ({ setText, setStart }) => {
-  const [history, setHistory] = useState([]);
+const History = ({ setText, setStart, setHistory, history }) => {
   // Fetching search history data from the server
-  let { data: historyData } = useFetch("http://localhost:3000/history");
-
-  let deleteHistory = (id) => {
-    setHistory(
-      (prev) => {
-        return prev.filter((his) => {
-          return his.id !== id;
-        });
-      },
-      fetch(`http://localhost:3000/history/${id}`, {
-        method: "DELETE"
-      })
-    );
-  };
 
   useEffect(() => {
-    setHistory(historyData);
-  }, [historyData]);
+    let historys = [];
+    let ref = collection(database, "history");
+    onSnapshot(ref, (docs) => {
+      if (!docs.empty) {
+        docs.forEach((doc) => {
+          let history = { id: doc.id, ...doc.data() };
+          historys.push(history);
+        });
+        setHistory(historys);
+      }
+    });
+  }, []);
+
+   let { isDark } = useTheme();
+
+  let deleteHistory = async (id) => {
+    let ref = doc(database, "history", id);
+
+    await deleteDoc(ref);
+     setHistory(prevHistory => prevHistory.filter(item => item.id !== id));
+
+  };
 
   return (
-    <div>
-      <div className="h-auto flex flex-col items-center  shadow-md rounded-xl bg-gray-50 md:w-[500px] w-[90%]">
+    <div className="w-full mx-auto flex justify-center">
+      {/* <div className="h-auto flex flex-col items-center  shadow-md rounded-xl bg-gray-50 md:w-[500px] w-[90%]"> */}
+      <div
+        className={`h-auto flex flex-col items-center shadow-lg rounded-xl  md:w-[500px] w-[90%]  ${
+          isDark ? "shadow-white" : " "
+        }`}
+      >
         {history &&
           history.map((h) => (
             <div
@@ -73,4 +84,4 @@ const History = ({ setText, setStart }) => {
 };
 
 
-export default History
+export default History 

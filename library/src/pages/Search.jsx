@@ -1,36 +1,58 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import useFetch from "../hooks/useFetch"; // Importing custom hook for fetching data
 import History from "./history";
 import useTheme from "../hooks/useTheme";
+import { addDoc, collection, doc, getDocs } from "firebase/firestore";
+import { database } from "../firebase";
  
 
 export default function Search() {
+   const [error, setError] = useState("");
+   const [loading, setLoading] = useState(false);
   const [text, setText] = useState("");
   const [index, setIndex] = useState(-1);
   const [resultArray, setResultArray] = useState([]);
   const [start, setStart] = useState(false);
+ let [result, setResult] = useState([]);
+  const [history, setHistory] = useState([]);
   const navigate = useNavigate();
 
-  let {
-    data: result,
-    error,
-    loading
-  } = useFetch(`http://localhost:3000/books`);
+  useEffect(() => {
+    setLoading(true)
+    let books = [];
+    let ref = collection(database, "books");
 
-  let { setPostData } = useFetch("http://localhost:3000/history", "POST");
+    getDocs(ref).then((docs) => {
+      if (docs.empty) {
+        setError("No Documents Found");
+        setLoading(false)
+      } else {
+        docs.forEach((doc) => {
+          let book = { id: doc.id, ...doc.data() };
+          books.push(book);
+        });
+        setResult(books);
+        setLoading(false);
+        setError('')
+      }
+    });
+  }, []);
 
-  let addHistory = async (abcd, id) => {
-    let data = {
-      h: abcd
-    };
+//  !genres.includes(categatatory);
 
-    if (text !== "") {
-      await setPostData(data);
-    }
+let addHistory = async (title, id) => {
+ if (!history.some((item) => item.h === title)) {
+   let data = {
+     h: title
+   };
+   let ref = collection(database, "history");
+   await addDoc(ref, data);
 
-    await handleClick(id);
-  };
+   handleClick(id);
+ } else {
+   handleClick(id);
+ }
+};
 
   // Function to handle click on a book item
   const handleClick = (bookId) => {
@@ -77,8 +99,34 @@ export default function Search() {
   return (
     <>
       {error && <p>{error}</p>}
-      {loading && <p>Loading ...</p>}
-      {!error && (
+      {loading && (
+        <div className={`w-full flex justify-center `}>
+          <h1 className={`flex items-center ${isDark ? 'text-white' : ''} `}>
+            <svg
+              className="animate-spin -ml-1 mr-3 h-5 w-5 "
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                className="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                strokeWidth="4"
+              ></circle>
+              <path
+                className="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+            Loading ...
+          </h1>
+        </div>
+      )}
+      {!error && !loading && (
         <section className="w-full h-[100vh] flex flex-col items-center rounded-md">
           <div className="w-full h-auto flex justify-center">
             {/* Input field for searching */}
@@ -100,7 +148,14 @@ export default function Search() {
           </div>
 
           {/* Rendering search history */}
-          {start && <History setStart={setStart} setText={setText} />}
+          {start && (
+            <History
+              setStart={setStart}
+              setText={setText}
+              history={history}
+              setHistory={setHistory}
+            />
+          )}
 
           {/* Rendering search results */}
           <div

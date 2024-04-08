@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
 
 const ThemeContext = createContext();
 
@@ -14,11 +14,15 @@ switch(action.type) {
 }
 const ThemeContextProvider = ({ children }) => {
 
+
  let [state, dispatch] = useReducer(ThemeReducer, {
-    theme: 'light'
+    // theme: 'light'
+    theme: localStorage.getItem('theme')
   })
 
-const isDark = state.theme === 'dark';
+localStorage.setItem("theme", state.theme);
+
+const isDark = localStorage.getItem('theme') === 'dark';
 
 let  changeTheme = (theme) => {
   // action -> type+ payload -> {type, payload}
